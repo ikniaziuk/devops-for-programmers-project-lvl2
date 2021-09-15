@@ -21,3 +21,9 @@
         restart: yes
         published_ports: "{{ app_port }}:3000"
         container_default_behavior: compatibility
+        env:
+          REDMINE_DB_POSTGRES: "{{ db_host }}"
+          REDMINE_DB_PORT: "{{ db_port }}"
+          REDMINE_DB_USERNAME: "{{ db_user }}"
+          REDMINE_DB_PASSWORD: "{{ db_password }}"
+          REDMINE_DB_DATABASE: "{{ db_database }}"
