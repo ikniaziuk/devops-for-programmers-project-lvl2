@@ -1,0 +1,6 @@
+username = doadmin
+password = IiM4Zxr82xq6EcbG
+host = db-postgresql-fra1-19144-do-user-9779531-0.b.db.ondigitalocean.com
+port = 25060
+database = defaultdb
+sslmode = require
