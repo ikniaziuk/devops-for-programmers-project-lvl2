@@ -27,3 +27,8 @@
           REDMINE_DB_USERNAME: "{{ db_user }}"
           REDMINE_DB_PASSWORD: "{{ db_password }}"
           REDMINE_DB_DATABASE: "{{ db_database }}"
+
+- hosts: webservers
+  gather_facts: true
+  roles:
+    - { role: datadog.datadog, become: yes }

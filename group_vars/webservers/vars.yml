@@ -1,0 +1,16 @@
+db_password: "{{ db_password }}"
+db_port: "{{ db_port }}"
+db_host: "{{ db_host }}"
+db_user: "{{ db_user }}"
+db_database: "{{ db_database }}"
+
+datadog_api_key: "{{ datadog_api_key }}"
+datadog_site: "datadoghq.eu"
+datadog_checks:
+  http_check:
+    init_config:
+    instances:
+      - name: Application health check status
+        url: "http://localhost:{{ app_port }}"
+        timeout: 5
+        method: GET
